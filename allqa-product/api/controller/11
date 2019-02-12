@@ -1,0 +1,102 @@
+功能 : 获取可出售课程列表
+地址 : /business/goods_list
+参数 : 无
+返回举例 : {"state_code":8000,"data":[{"state":1,....}]}
+
+功能 : 获取单个课程信息
+地址 : /business/goods_info
+参数 : goods_id
+返回举例 :{"state_code":8000,"data":{"state":1}}
+
+功能 : 获取课程报名人数
+地址 : /business/pay_number
+参数 : goods_id
+返回举例 :{"state_code":8000,"data":{"number":1}}
+
+功能 : 今日阅读 - 获取当前用户状态
+地址 : /business/get_account_state
+参数 : openid
+返回举例 : {"state_code":8000,"data":{"state":1}}
+备注 : 1-未购买课程   2-已购买课程未开课   3-已购买课程已开课
+      当返回2或者3的时候 data里会包含goods_id/periodical_id/oldexam_id
+
+功能 : 今日阅读 - 距离开课时间
+地址 : /business/get_start_course_days
+参数 : openid
+返回举例 : {"state_code":8000,"data":{"days":1}}
+
+
+功能 : 今日阅读 - 今日真题试题信息
+功能 : 今日阅读 - 今日期刊信息
+地址 : /business/today_periodical_info
+参数 : periodical_id
+返回举例 : {"state_code":8000,"data":[]}
+
+
+功能 : 今日阅读 - 今日真题信息
+地址 : /business/today_oldexam_info
+参数 : oldexam_id
+返回举例 : {"state_code":8000,"data":[]}
+
+
+地址 : /business/oldexam_question
+返回举例 : {"state_code":8000,"data":[]}
+
+
+功能 : 今日阅读 - 插入阅读记录
+地址 : /business/insert_reading_log
+参数 : aid/type/openid/goods_id/size/how_time/  (文章id/类型-1期刊2真题/微信id/课程id/
+参数 : oldexam_id字数/用时)
+返回举例 : {"state_code":8000,"data":[]}
+
+
+功能 : 今日阅读-今日打卡 已阅读字数,我的坚持天数
+地址 : /business/today_clock
+参数 : goods_id/oldexam_id
+返回举例 : {"state_code":8000,"data":[]}
+
+
+功能 : 我的-坚持天数
+地址 : /account/total_days
+参数 : openid
+返回举例 : {"state_code":8000,"data":{"total_days":1}}
+
+
+功能 : 我的-已阅读总字数
+地址 : /account/total_size
+参数 : openid
+返回举例 : {"state_code":8000,"data":{"total_size":100}}
+
+功能 : 日历
+地址 : /business/curr_month_reading_log
+参数 : openid/month/year/goods_id
+返回举例 : {"state_code":8000,"data":{}}
+
+功能 : 计划 -  周
+地址 : /account/week_plan
+参数 : goods_id
+
+功能 : 调取周一到周五的课程状态
+地址 : /business/account_chapters_info
+参数 : openid/datetime/goods_id
+
+功能 : 我的老师
+地址 : /account/teacher_info
+参数 : openid/goods_id
+
+功能 : 获取用户信息
+地址 : /account/get_account_info
+参数 : openid
+
+功能 : 查找好友
+地址 : /account/find_friend
+参数 : openid/sex/wechat/mobile/constellation/find_sex/find_constellation
+
+功能 : 查询提醒时间
+地址 : /account/remind_info
+参数 : openid
+
+功能 : 设置提醒时间
+地址 : /account/set_remind
+参数 : openid/hour/minute
+
